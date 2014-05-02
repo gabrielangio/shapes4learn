@@ -18,6 +18,11 @@ public class Color {
 	 * Blue.
 	 */
 	private int b;
+        
+        /**
+         * Pink
+         */
+        private int p;
 
 	public Color() {
 	}

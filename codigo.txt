@@ -1,0 +1,5 @@
+create circle uno;
+abc
+abc
+create rectangle tres;
+abc

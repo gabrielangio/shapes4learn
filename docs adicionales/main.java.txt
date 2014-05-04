@@ -20,12 +20,12 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class Main {
    
     public static void main(String[] args) throws CodeException, FileNotFoundException {
-                
-        Lexico analizadorLexico = new Lexico();
+        
+        
+        /*String codigo = "setbase 5 + 4 in rectangle myrectangle1 ;";
         ShapeAmbient ambiente = new ShapeAmbient() {
 
             @Override
@@ -52,14 +52,55 @@ public class Main {
             public Iterable<Shape> shapes() {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
-        };
+        }; 
+       
+            //Invoco a la interfaz Interpreter
+            analisisLexico.interpret(codigo, ambiente);
         
-        String codigo = new String("create shape circle in holamundo");
+        */
         
-        analizadorLexico.interpret(codigo, ambiente);
-            
         
+        String cadena = new String();  
+        File arch = new File("codigo.txt");
+        FileReader archlector = new FileReader(arch);
+        BufferedReader archbufer = new BufferedReader(archlector);
+        ArrayList array = new ArrayList(); 
+        try {
+            while(archbufer.ready()){
+                    
+                cadena = archbufer.readLine();
+                StringTokenizer st = new StringTokenizer(cadena);
                 
+                while(st.hasMoreTokens()){
+                    
+                    array.add(st.nextToken());
+                     
+                                       
+                    Pattern pat = Pattern.compile("abc");
+                    Matcher mat = pat.matcher(cadena);
+                    if (mat.matches()) {
+                        System.out.println("SI");
+                    } else {
+                        System.out.println("NO");
+                    }
+                                        
+                    
+                }
+            }
+        } 
+        
+        catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            //Recorre lista e imprime
+        //for(int i =0; i < array.size();i++){
+        
+            
+        //} 
+        
     
+        }
+
+        
     }
-}

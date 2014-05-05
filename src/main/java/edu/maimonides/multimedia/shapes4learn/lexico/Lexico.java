@@ -34,39 +34,30 @@ public  class Lexico implements Interpreter {
                     //Evalua si el lexema es un Metodo
                     if( (array.get(i).equals("create")) || (array.get(i).equals("setcolor")) || (array.get(i).equals("setbase")) || (array.get(i).equals("setheight")) || (array.get(i).equals("setradius")) || (array.get(i).equals("setposition")))    {
                         System.out.println(array.get(i)+"(METODO)");
-                        
-                   }
-                    
-                   //Evalua si el lexema es una Forma 
-                   if( (array.get(i).equals("shape")) || (array.get(i).equals("rectangle")) || (array.get(i).equals("circle"))){
-                       System.out.println(array.get(i)+"(FORMA)");
-                       
-                   } 
-                
-                   //Evalua  si el lexema es un in
-                   if( array.get(i).equals("in")){
-                       System.out.println(array.get(i)+"(in)");
-                       
-                   }
-                   
-                   //Evalua si el lexema es un id
-                   if( ( array.get(i).equals("create")) || ( array.get(i).equals("circle")) || (array.get(i).equals("setcolor")) || (array.get(i).equals("setbase")) || (array.get(i).equals("setheight")) || (array.get(i).equals("setradius")) || (array.get(i).equals("setposition")) || (array.get(i).equals("shape")) || (array.get(i).equals("rectangle")) || (array.get(i).equals("circle")) || (array.get(i).equals("in")) ) {
-                     } 
-                   else {
-                      
-                    System.out.println(array.get(i)+"(id)");
-                        //Pattern expRegularId = Pattern.compile ("[a-zA-Z]{1,}");
-                        //Pattern expRegularId = Pattern.compile("[a-zA-Z]+[^in][^shape][^rectangle][^circle][^create][^setcolor][^setbase][^setheight][^setradius][^setposition]");
-                        //Matcher compara = expRegularId.matcher((CharSequence) array.get(i));
-                        //if (compara.matches()) 
-                        //{                       
-                        //     System.out.println(array.get(i)+"(id)");
-                        //} 
-                   }
-                   
+                    }
+                        else
+                                {
+                                //Evalua si el lexema es una Forma
+                                if( (array.get(i).equals("shape")) || (array.get(i).equals("rectangle")) || (array.get(i).equals("circle"))){
+                                System.out.println(array.get(i)+"(FORMA)");
+                                }
+                        else
+                                {
+                                //Evalua  si el lexema es un in
+                                if( array.get(i).equals("in")){
+                                System.out.println(array.get(i)+"(in)"); 
+                                }
+                        else
+                                {
+                                //Evalua  si el lexema es un in
+                                if( array.get(i).equals("in")){
+                                System.out.println(array.get(i)+"(in)");
+                                }
+                        else
+                                {
+                                System.out.println(array.get(i)+"(id)"); 
+                                }}}
+                                }
+                    }
     }
-
- }
-
-
 }

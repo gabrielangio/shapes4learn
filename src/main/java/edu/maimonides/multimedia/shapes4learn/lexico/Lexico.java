@@ -49,14 +49,8 @@ public  class Lexico implements Interpreter {
                                 }
                         else
                                 {
-                                //Evalua  si el lexema es un in
-                                if( array.get(i).equals("in")){
-                                System.out.println(array.get(i)+"(in)");
-                                }
-                        else
-                                {
                                 System.out.println(array.get(i)+"(id)"); 
-                                }}}
+                                }}
                                 }
                     }
     }

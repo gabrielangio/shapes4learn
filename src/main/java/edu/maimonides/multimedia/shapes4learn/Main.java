@@ -10,6 +10,7 @@ import edu.maimonides.multimedia.shapes4learn.model.shapes.Rectangle;
 import edu.maimonides.multimedia.shapes4learn.model.shapes.Shape;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -29,31 +30,32 @@ public class Main {
     public static void main(String[] args) throws CodeException, FileNotFoundException, IOException {
                 
         JLabel Enunciado = new JLabel ("Introduzca el texto a analizar");
-        
         JButton Boton = new JButton("Analizar Texto Ingresado");
         JLabel Comentario = new JLabel ("En C:\\ se le generará el archivo final.txt con el resultado del análisis");
-        
+        JButton BotonSalir = new JButton("Salir");
         JFrame Ventana = new JFrame();
         Ventana.setTitle("Analizador Léxico");
         Ventana.setLocationRelativeTo(null);
         Ventana.setLayout(new FlowLayout());
         Ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel Panel = new JPanel();
-        final JTextArea Texto = new JTextArea(10,20);
+        final JTextArea Texto = new JTextArea(15,20);
         JScrollPane spane = new JScrollPane(Texto);
         Panel.add(spane);
         Ventana.add(Panel);
         Ventana.setSize(400, 400);
-        
-
-        
         Ventana.add(Enunciado);
         Ventana.add(Texto);
         Ventana.add(Boton);
         Ventana.add(Comentario);
+        Ventana.add(BotonSalir);
         Ventana.setVisible(true);
-      
-        
+         
+        BotonSalir.addActionListener (new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+            System.exit(0); } }
+        );     
+                
         Boton.addActionListener(new java.awt.event.ActionListener()
             {
                 public void actionPerformed (java.awt.event.ActionEvent evt)

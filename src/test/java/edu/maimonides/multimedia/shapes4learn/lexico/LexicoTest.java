@@ -43,7 +43,7 @@ public class LexicoTest {
     @Test
     public void TestCorrecto1() throws Exception {
         System.out.println("codigo correcto test1");
-        String code1 = "create shape saraza";
+        String code1 = "set circle mundo";
         ShapeAmbient ambient1 = null;
         Lexico instance1 = new Lexico();
         instance1.interpret(code1, ambient1);
@@ -54,7 +54,7 @@ public class LexicoTest {
     @Test    
     public void TestCorrecto2() throws Exception {
         System.out.println("codigo correcto test2");
-        String code2 = "in #00AB34 234 +";
+        String code2 = "in #11A3E2 123 *";
         ShapeAmbient ambient2 = null;
         Lexico instance2 = new Lexico();
         instance2.interpret(code2, ambient2);
@@ -72,7 +72,7 @@ public class LexicoTest {
     @Test
     public void TestIncorrecto1() throws Exception {
         System.out.println("codigo incorrecto test1");
-        String codeIncorrect1 = "aabb43 #*ef";
+        String codeIncorrect1 = "15dc14 #a*g";
         ShapeAmbient ambientIncorrect1 = null;
         Lexico instanceIncorrect1 = new Lexico();
         instanceIncorrect1.interpret(codeIncorrect1, ambientIncorrect1);
@@ -81,7 +81,7 @@ public class LexicoTest {
     @Test
     public void TestIncorrecto2() throws Exception {
         System.out.println("codigo incorrecto test2");
-        String codeIncorrect2 = "#ed45gbt5 [sdas";
+        String codeIncorrect2 = "#ff44ac87 [hola";
         ShapeAmbient ambientIncorrect2 = null;
         Lexico instanceIncorrect2 = new Lexico();
         instanceIncorrect2.interpret(codeIncorrect2, ambientIncorrect2);
